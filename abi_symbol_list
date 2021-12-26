@@ -371,7 +371,7 @@
   usb_register_driver
   usb_submit_urb
   usb_unanchor_urb
-  usleep_range
+  usleep_range_state
   vabits_actual
   vfree
   virtio_check_driver_offered_feature
@@ -659,6 +659,11 @@
   netdev_lower_state_changed
   netdev_pick_tx
   pci_bus_type
+  vlan_uses_dev
+  vlan_vid_add
+  vlan_vid_del
+  vlan_vids_add_by_dev
+  vlan_vids_del_by_dev
 
 # required by psmouse.ko
   bus_register_notifier
@@ -1993,7 +1998,7 @@
   unregister_reboot_notifier
   unregister_rpmsg_driver
   usb_disabled
-  usleep_range
+  usleep_range_state
   vabits_actual
   vfree
   vmalloc
