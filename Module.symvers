@@ -54,7 +54,7 @@
   
 
         
-  var JSVariables = {"artifacts":[],"authed":true,"branchName":"aosp_kernel-common-android13-5.15","buildId":"8019225","forceLogin":false,"idToken":null,"releaseCandidateName":"","targetName":"kernel_aarch64"};
+  var JSVariables = {"artifacts":[],"authed":true,"branchName":"aosp_kernel-common-android13-5.15","buildId":"8043542","forceLogin":false,"idToken":null,"releaseCandidateName":"","targetName":"kernel_aarch64"};
 
   new Promise(function(res) { window.addEventListener('state-ready', function(){ return res()})}).then(function() {
     const stateProvider = document.querySelector('#state');
