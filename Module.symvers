@@ -13,7 +13,7 @@
   
     
       
-        <script rel="import" href="/public_builds/elements/artifact_page/artifact_page_bin_out/artifact_page_bin.js?c=441074441983687551"></script>
+        <script rel="import" href="/public_builds/elements/artifact_page/artifact_page_bin_out/artifact_page_bin.js?c=441236787675828967"></script>
       
 
     
@@ -41,7 +41,7 @@
         window.removeEventListener('load', onChange);
         window.removeEventListener('dom-change', onChange);
         window.removeEventListener('HTMLImportsLoaded', onChange);
-        var data = {"CacheBust":"441074441983687551","Debug":false,"JsImport":true,"PageElement":"artifact-page","PageID":"artifact_page","Public":true,"RootDir":"artifact_page"};
+        var data = {"CacheBust":"441236787675828967","Debug":false,"JsImport":true,"PageElement":"artifact-page","PageID":"artifact_page","Public":true,"RootDir":"artifact_page"};
 
 		var elementsScript = document.createElement('script');
 		var baseUrl = data['Public'] ? "/public_builds" : "/builds";
@@ -54,7 +54,7 @@
   
 
         
-  var JSVariables = {"artifacts":[],"authed":true,"branchName":"aosp_kernel-common-android13-5.15","buildId":"8116252","forceLogin":false,"idToken":null,"releaseCandidateName":"","targetName":"kernel_aarch64"};
+  var JSVariables = {"artifacts":[],"authed":true,"branchName":"aosp_kernel-common-android13-5.15","buildId":"8141787","forceLogin":false,"idToken":null,"releaseCandidateName":"","targetName":"kernel_aarch64"};
 
   new Promise(function(res) { window.addEventListener('state-ready', function(){ return res()})}).then(function() {
     const stateProvider = document.querySelector('#state');
@@ -84,7 +84,7 @@
   <script type="text/javascript" src="//www.gstatic.com/feedback/api.js" async></script>
   <script>
     (function() {
-      var data = {"ProductId":"5093044","ProductVersion":"441074441983687551"};
+      var data = {"ProductId":"5093044","ProductVersion":"441236787675828967"};
 
     function showFeedback() {
       userfeedback.api.startFeedback({
