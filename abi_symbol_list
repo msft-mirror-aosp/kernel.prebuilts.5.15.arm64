@@ -2274,7 +2274,7 @@
   dma_buf_unmap_attachment
   dma_get_sgtable_attrs
   down_read
-  find_vma
+  __find_vma
   kasan_flag_enabled
   __mmap_lock_do_trace_acquire_returned
   __mmap_lock_do_trace_released
@@ -3436,6 +3436,7 @@
   bcmp
   bin2hex
   __bitmap_clear
+  __bitmap_equal
   bitmap_from_arr32
   bitmap_parse
   bitmap_parselist
@@ -3860,6 +3861,7 @@
   downgrade_write
   down_interruptible
   down_read
+  down_read_trylock
   down_trylock
   down_write
   drain_workqueue
@@ -4080,7 +4082,7 @@
   find_get_pid
   _find_next_bit
   find_task_by_vpid
-  find_vma
+  __find_vma
   finish_wait
   flush_work
   flush_workqueue
@@ -4508,6 +4510,7 @@
   of_clk_src_onecell_get
   of_count_phandle_with_args
   of_cpu_node_to_id
+  of_devfreq_cooling_register_power
   of_device_get_match_data
   of_device_is_available
   of_device_is_compatible
@@ -4920,6 +4923,7 @@
   sg_next
   __sg_page_iter_next
   __sg_page_iter_start
+  shmem_file_setup
   simple_attr_open
   simple_attr_read
   simple_attr_release
@@ -5096,6 +5100,7 @@
   sysrq_mask
   system_freezing_cnt
   system_highpri_wq
+  system_long_wq
   system_state
   system_unbound_wq
   system_wq
@@ -5127,6 +5132,7 @@
   thermal_zone_device_register
   thermal_zone_device_unregister
   thermal_zone_device_update
+  thermal_zone_get_temp
   thermal_zone_of_sensor_register
   thermal_zone_of_sensor_unregister
   thread_group_cputime_adjusted
@@ -6029,7 +6035,7 @@
   _find_first_bit
   find_get_pid
   _find_next_bit
-  find_vma
+  __find_vma
   finish_wait
   flush_dcache_page
   flush_delayed_work
@@ -7808,6 +7814,7 @@
   dma_buf_get
   dma_buf_map_attachment
   dma_buf_put
+  dma_buf_set_name
   dma_buf_unmap_attachment
   dma_contiguous_default_area
   dma_fence_add_callback
@@ -7879,8 +7886,8 @@
   extcon_set_state_sync
   fd_install
   fget
-  find_vma
   find_vpid
+  __find_vma
   finish_wait
   firmware_request_nowarn
   flush_dcache_page
@@ -8572,6 +8579,7 @@
   rdev_get_drvdata
   reboot_mode
   refcount_dec_and_lock
+  reclaim_shmem_address_space
   refcount_dec_not_one
   refcount_warn_saturate
   register_console
