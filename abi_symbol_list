@@ -6965,7 +6965,6 @@
   __put_task_struct
 
 # required by fips140.ko
-  add_random_ready_callback
   aead_register_instance
   ahash_register_instance
   arch_timer_read_counter
@@ -7040,7 +7039,6 @@
   crypto_unregister_skciphers
   crypto_unregister_template
   crypto_unregister_templates
-  del_random_ready_callback
   down_write
   fpsimd_context_busy
   get_random_bytes
