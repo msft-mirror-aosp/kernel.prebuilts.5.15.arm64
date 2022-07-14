@@ -1415,6 +1415,7 @@
   _raw_read_unlock
   _raw_write_lock
   _raw_write_unlock
+  wait_on_page_bit
 
 [abi_symbol_list]
 # commonly used symbols
@@ -6937,7 +6938,6 @@
   ahash_register_instance
   arch_timer_read_counter
   bcmp
-  cancel_work_sync
   __cfi_slowpath_diag
   complete_all
   completion_done
@@ -7033,12 +7033,11 @@
   preempt_schedule
   preempt_schedule_notrace
   _printk
-  queue_work_on
   ___ratelimit
   _raw_spin_lock
   _raw_spin_unlock
   refcount_warn_saturate
-  register_random_ready_notifier
+  rng_is_initialized
   scatterwalk_ffwd
   scatterwalk_map_and_copy
   sg_init_one
@@ -7059,7 +7058,6 @@
   strlcpy
   strlen
   strncmp
-  system_wq
   __traceiter_android_vh_aes_decrypt
   __traceiter_android_vh_aes_encrypt
   __traceiter_android_vh_aes_expandkey
@@ -7070,7 +7068,6 @@
   __tracepoint_android_vh_sha256
   tracepoint_probe_register
   __ubsan_handle_cfi_check_fail_abort
-  unregister_random_ready_notifier
   up_write
   wait_for_completion
   xa_load
