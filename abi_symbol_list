@@ -8329,6 +8329,7 @@
   __const_udelay
   consume_skb
   contig_page_data
+  copy_from_kernel_nofault
   __cpu_active_mask
   cpu_all_bits
   cpu_bit_bitmap
@@ -8933,6 +8934,7 @@
   mmc_free_host
   mmc_gpio_get_cd
   mmc_gpio_get_ro
+  mmc_hw_reset
   mmc_of_parse
   mmc_regulator_get_supply
   mmc_regulator_set_ocr
@@ -9585,6 +9587,7 @@
   __traceiter_android_vh_ipi_stop
   __traceiter_android_vh_logbuf
   __traceiter_android_vh_logbuf_pr_cont
+  __traceiter_android_vh_meminfo_proc_show
   __traceiter_android_vh_scheduler_tick
   __traceiter_android_vh_show_mem
   __traceiter_binder_transaction_received
@@ -9648,6 +9651,7 @@
   __tracepoint_android_vh_ipi_stop
   __tracepoint_android_vh_logbuf
   __tracepoint_android_vh_logbuf_pr_cont
+  __tracepoint_android_vh_meminfo_proc_show
   __tracepoint_android_vh_scheduler_tick
   __tracepoint_android_vh_show_mem
   __tracepoint_binder_transaction_received
@@ -15688,10 +15692,12 @@
   int_sqrt
   iomem_resource
   iommu_alloc_resv_region
+  iommu_attach_device
   iommu_attach_group
   iommu_aux_attach_device
   iommu_aux_detach_device
   iommu_aux_get_pasid
+  iommu_detach_device
   iommu_dev_enable_feature
   iommu_dev_feature_enabled
   iommu_device_register
@@ -17022,6 +17028,10 @@
   zs_map_object
   zs_pool_stats
   zs_unmap_object
+
+[abi_symbol_list]
+  __traceiter_android_vh_tune_mmap_readaround
+  __tracepoint_android_vh_tune_mmap_readaround
 
 [abi_symbol_list]
   add_timer
@@ -22342,6 +22352,9 @@
   geni_se_tx_dma_unprep
   genphy_check_and_restart_aneg
   __genphy_config_aneg
+  genphy_c45_an_config_aneg
+  genphy_c45_check_and_restart_aneg
+  genphy_c45_pma_setup_forced
   genphy_c45_read_status
   genphy_read_abilities
   genphy_read_lpa
@@ -22603,6 +22616,7 @@
   iommu_group_get_iommudata
   iommu_group_put
   iommu_group_ref_get
+  iommu_group_remove_device
   iommu_group_set_iommudata
   iommu_iova_to_phys
   iommu_map
@@ -23147,6 +23161,7 @@
   phy_modify
   phy_modify_changed
   phy_modify_mmd
+  phy_modify_mmd_changed
   phy_modify_paged
   phy_modify_paged_changed
   phy_power_off
@@ -23157,6 +23172,7 @@
   phy_restore_page
   phy_save_page
   phy_select_page
+  phy_set_max_speed
   phy_set_mode_ext
   phy_sfp_attach
   phy_sfp_detach
@@ -23408,6 +23424,13 @@
   regulator_set_mode
   regulator_set_voltage
   regulator_unregister_notifier
+  relay_close
+  relay_file_operations
+  relay_flush
+  relay_open
+  relay_reset
+  relay_subbufs_consumed
+  relay_switch_subbuf
   release_firmware
   __release_region
   release_sock
@@ -25416,6 +25439,7 @@ filemap_fdatawrite
 filemap_flush
 __filemap_set_wb_err
 filemap_write_and_wait_range
+file_check_and_advance_wb_err
 file_remove_privs
 file_update_time
 file_write_and_wait_range
@@ -28775,9 +28799,15 @@ xa_load
   __traceiter_android_vh_use_cma_first_check
   __traceiter_android_vh_alloc_highpage_movable_gfp_adjust
   __traceiter_android_vh_anon_gfp_adjust
+  __traceiter_android_vh_alloc_flags_cma_adjust
+  __traceiter_android_vh_rmqueue_cma_fallback
+  __traceiter_android_vh_try_cma_fallback
   __tracepoint_android_vh_use_cma_first_check
   __tracepoint_android_vh_alloc_highpage_movable_gfp_adjust
   __tracepoint_android_vh_anon_gfp_adjust
+  __tracepoint_android_vh_alloc_flags_cma_adjust
+  __tracepoint_android_vh_rmqueue_cma_fallback
+  __tracepoint_android_vh_try_cma_fallback
 
 # required by unisoc_mm_emem.ko
   __traceiter_android_vh_oom_check_panic
@@ -31884,6 +31914,12 @@ xa_load
   ioc_lookup_icq
   percpu_counter_add_batch
 
+#required by mq-deadline module
+  blk_mq_debugfs_rq_show
+  seq_list_start
+  seq_list_next
+  __blk_mq_debugfs_rq_show
+
 #required by cs35l41 module
   regcache_drop_region
   regmap_async_complete
@@ -32680,6 +32716,7 @@ xa_load
   __traceiter_android_rvh_do_serror
   __traceiter_android_rvh_pick_next_entity
   __traceiter_android_rvh_place_entity
+  __traceiter_android_rvh_rtmutex_force_update
   __traceiter_android_rvh_schedule
   __traceiter_android_rvh_set_balance_anon_file_reclaim
   __traceiter_android_rvh_set_user_nice
@@ -32700,12 +32737,14 @@ xa_load
   __traceiter_android_vh_binder_select_worklist_ilocked
   __traceiter_android_vh_binder_thread_read
   __traceiter_android_vh_binder_thread_release
+  __traceiter_android_vh_blk_account_io_done
   __traceiter_android_vh_build_sched_domains
   __traceiter_android_vh_cache_show
   __traceiter_android_vh_check_uninterruptible_tasks_dn
   __traceiter_android_vh_cleanup_old_buffers_bypass
   __traceiter_android_vh_cma_drain_all_pages_bypass
   __traceiter_android_vh_compact_finished
+  __traceiter_android_vh_check_page_look_around_ref
   __traceiter_android_vh_alloc_pages_reclaim_bypass
   __traceiter_android_vh_free_unref_page_bypass
   __traceiter_android_vh_kvmalloc_node_use_vmalloc
@@ -32735,6 +32774,8 @@ xa_load
   __traceiter_android_vh_irqtime_account_process_tick
   __traceiter_android_vh_killed_process
   __traceiter_android_vh_kmalloc_slab
+  __traceiter_android_vh_look_around
+  __traceiter_android_vh_look_around_migrate_page
   __traceiter_android_vh_madvise_cold_or_pageout_abort
   __traceiter_android_vh_mark_page_accessed
   __traceiter_android_vh_mem_cgroup_alloc
@@ -32760,6 +32801,7 @@ xa_load
   __traceiter_android_vh_record_rtmutex_lock_starttime
   __traceiter_android_vh_record_rwsem_lock_starttime
   __traceiter_android_vh_rmqueue
+  __traceiter_android_vh_rtmutex_waiter_prio
   __traceiter_android_vh_rwsem_can_spin_on_owner
   __traceiter_android_vh_rwsem_opt_spin_finish
   __traceiter_android_vh_rwsem_opt_spin_start
@@ -32769,9 +32811,11 @@ xa_load
   __traceiter_android_vh_sched_stat_runtime_rt
   __traceiter_android_vh_show_mapcount_pages
   __traceiter_android_vh_sync_txn_recvd
+  __traceiter_android_vh_task_blocks_on_rtmutex
   __traceiter_android_vh_tune_inactive_ratio
   __traceiter_android_vh_tune_scan_type
   __traceiter_android_vh_tune_swappiness
+  __traceiter_android_vh_test_clear_look_around_ref
   __traceiter_android_vh_update_page_mapcount
   __traceiter_block_bio_complete
   __traceiter_block_bio_queue
@@ -32796,6 +32840,7 @@ xa_load
   __tracepoint_android_rvh_do_serror
   __tracepoint_android_rvh_pick_next_entity
   __tracepoint_android_rvh_place_entity
+  __tracepoint_android_rvh_rtmutex_force_update
   __tracepoint_android_rvh_schedule
   __tracepoint_android_rvh_set_balance_anon_file_reclaim
   __tracepoint_android_rvh_set_user_nice
@@ -32816,12 +32861,14 @@ xa_load
   __tracepoint_android_vh_binder_select_worklist_ilocked
   __tracepoint_android_vh_binder_thread_read
   __tracepoint_android_vh_binder_thread_release
+  __tracepoint_android_vh_blk_account_io_done
   __tracepoint_android_vh_build_sched_domains
   __tracepoint_android_vh_cache_show
   __tracepoint_android_vh_check_uninterruptible_tasks_dn
   __tracepoint_android_vh_cleanup_old_buffers_bypass
   __tracepoint_android_vh_cma_drain_all_pages_bypass
   __tracepoint_android_vh_compact_finished
+  __tracepoint_android_vh_check_page_look_around_ref
   __tracepoint_android_vh_alloc_pages_reclaim_bypass
   __tracepoint_android_vh_free_unref_page_bypass
   __tracepoint_android_vh_kvmalloc_node_use_vmalloc
@@ -32851,6 +32898,8 @@ xa_load
   __tracepoint_android_vh_irqtime_account_process_tick
   __tracepoint_android_vh_killed_process
   __tracepoint_android_vh_kmalloc_slab
+  __tracepoint_android_vh_look_around
+  __tracepoint_android_vh_look_around_migrate_page
   __tracepoint_android_vh_madvise_cold_or_pageout_abort
   __tracepoint_android_vh_mark_page_accessed
   __tracepoint_android_vh_mem_cgroup_alloc
@@ -32876,6 +32925,7 @@ xa_load
   __tracepoint_android_vh_record_rtmutex_lock_starttime
   __tracepoint_android_vh_record_rwsem_lock_starttime
   __tracepoint_android_vh_rmqueue
+  __tracepoint_android_vh_rtmutex_waiter_prio
   __tracepoint_android_vh_rwsem_can_spin_on_owner
   __tracepoint_android_vh_rwsem_opt_spin_finish
   __tracepoint_android_vh_rwsem_opt_spin_start
@@ -32885,9 +32935,11 @@ xa_load
   __tracepoint_android_vh_sched_stat_runtime_rt
   __tracepoint_android_vh_show_mapcount_pages
   __tracepoint_android_vh_sync_txn_recvd
+  __tracepoint_android_vh_task_blocks_on_rtmutex
   __tracepoint_android_vh_tune_inactive_ratio
   __tracepoint_android_vh_tune_scan_type
   __tracepoint_android_vh_tune_swappiness
+  __tracepoint_android_vh_test_clear_look_around_ref
   __tracepoint_android_vh_update_page_mapcount
   __tracepoint_block_bio_complete
   __tracepoint_block_bio_queue
@@ -32930,6 +32982,8 @@ xa_load
   __wake_up
   wake_up_process
   wq_worker_comm
+  is_ashmem_file
+  zero_pfn
 
 [abi_symbol_list]
   add_cpu
@@ -34042,6 +34096,10 @@ xa_load
   mdiobus_write
   mdio_device_create
   mdio_device_free
+  media_create_pad_link
+  media_entity_remote_pad
+  media_pipeline_start
+  media_pipeline_stop
   memchr
   memcmp
   memcpy
@@ -34259,6 +34317,7 @@ xa_load
   param_get_charp
   param_get_hexint
   param_get_int
+  param_get_short
   param_get_string
   param_ops_bool
   param_ops_byte
@@ -34275,6 +34334,7 @@ xa_load
   param_set_copystring
   param_set_hexint
   param_set_int
+  pci_choose_state
   pci_disable_device
   pci_enable_device
   pci_find_next_bus
@@ -34290,9 +34350,11 @@ xa_load
   pci_read_config_dword
   pci_remove_root_bus
   pci_rescan_bus
+  pci_set_power_state
   pci_stop_and_remove_bus_device_locked
   pci_stop_root_bus
   pci_unlock_rescan_remove
+  pci_write_config_byte
   pci_write_config_dword
   PDE_DATA
   __per_cpu_offset
@@ -34511,6 +34573,11 @@ xa_load
   regulator_map_voltage_iterate
   regulator_put
   regulator_set_voltage
+  relay_close
+  relay_file_operations
+  relay_flush
+  relay_open
+  relay_switch_subbuf
   release_firmware
   __release_region
   release_resource
@@ -34832,6 +34899,7 @@ xa_load
   system_freezing_cnt
   system_highpri_wq
   system_power_efficient_wq
+  system_unbound_wq
   system_wq
   sys_tz
   __tasklet_hi_schedule
@@ -34862,6 +34930,7 @@ xa_load
   __traceiter_android_rvh_check_preempt_tick
   __traceiter_android_rvh_check_preempt_wakeup
   __traceiter_android_rvh_do_sea
+  __traceiter_android_rvh_enqueue_task
   __traceiter_android_rvh_gic_v3_set_affinity
   __traceiter_android_rvh_iommu_setup_dma_ops
   __traceiter_android_rvh_panic_unhandled
@@ -34869,6 +34938,7 @@ xa_load
   __traceiter_android_rvh_replace_next_task_fair
   __traceiter_android_rvh_schedule
   __traceiter_android_rvh_select_task_rq_rt
+  __traceiter_android_rvh_tick_entry
   __traceiter_android_vh_cma_drain_all_pages_bypass
   __traceiter_android_vh_cpu_idle_enter
   __traceiter_android_vh_cpu_idle_exit
@@ -34887,12 +34957,14 @@ xa_load
   __traceiter_mmap_lock_acquire_returned
   __traceiter_mmap_lock_released
   __traceiter_mmap_lock_start_locking
+  __traceiter_sched_switch
   __traceiter_xdp_exception
   trace_output_call
   __tracepoint_android_rvh_arm64_serror_panic
   __tracepoint_android_rvh_check_preempt_tick
   __tracepoint_android_rvh_check_preempt_wakeup
   __tracepoint_android_rvh_do_sea
+  __tracepoint_android_rvh_enqueue_task
   __tracepoint_android_rvh_gic_v3_set_affinity
   __tracepoint_android_rvh_iommu_setup_dma_ops
   __tracepoint_android_rvh_panic_unhandled
@@ -34900,6 +34972,7 @@ xa_load
   __tracepoint_android_rvh_replace_next_task_fair
   __tracepoint_android_rvh_schedule
   __tracepoint_android_rvh_select_task_rq_rt
+  __tracepoint_android_rvh_tick_entry
   __tracepoint_android_vh_cma_drain_all_pages_bypass
   __tracepoint_android_vh_cpu_idle_enter
   __tracepoint_android_vh_cpu_idle_exit
@@ -34920,6 +34993,7 @@ xa_load
   __tracepoint_mmap_lock_start_locking
   tracepoint_probe_register
   tracepoint_probe_unregister
+  __tracepoint_sched_switch
   __tracepoint_xdp_exception
   trace_print_array_seq
   trace_print_flags_seq
@@ -35020,17 +35094,22 @@ xa_load
   utf8_to_utf32
   uuid_null
   v4l2_ctrl_add_handler
+  v4l2_ctrl_find
   v4l2_ctrl_handler_free
   v4l2_ctrl_handler_init_class
   v4l2_ctrl_handler_setup
   v4l2_ctrl_new_custom
+  v4l2_ctrl_new_int_menu
   v4l2_ctrl_new_std
+  __v4l2_ctrl_s_ctrl
+  __v4l2_ctrl_s_ctrl_int64
   v4l2_ctrl_subscribe_event
   v4l2_device_register
   v4l2_device_register_subdev
   v4l2_device_unregister
   v4l2_device_unregister_subdev
   v4l2_event_queue_fh
+  v4l2_event_subdev_unsubscribe
   v4l2_event_subscribe
   v4l2_event_unsubscribe
   v4l2_fh_add
@@ -35038,6 +35117,7 @@ xa_load
   v4l2_fh_exit
   v4l2_fh_init
   v4l2_fh_open
+  __v4l2_find_nearest_size
   v4l2_i2c_subdev_init
   v4l2_m2m_buf_queue
   v4l2_m2m_buf_remove
@@ -35060,6 +35140,7 @@ xa_load
   v4l2_m2m_release
   v4l2_m2m_try_schedule
   v4l2_src_change_event_subscribe
+  v4l2_subdev_link_validate
   v4l_bound_align_image
   vabits_actual
   vb2_buffer_done
@@ -35072,6 +35153,7 @@ xa_load
   vb2_ioctl_create_bufs
   vb2_ioctl_dqbuf
   vb2_ioctl_expbuf
+  vb2_ioctl_prepare_buf
   vb2_ioctl_qbuf
   vb2_ioctl_querybuf
   vb2_ioctl_reqbufs
@@ -35116,6 +35198,7 @@ xa_load
   wait_for_completion_timeout
   __wait_on_buffer
   wait_on_page_bit
+  wait_woken
   __wake_up
   wake_up_process
   wakeup_source_register
