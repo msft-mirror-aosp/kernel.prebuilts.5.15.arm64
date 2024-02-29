@@ -4548,10 +4548,6 @@
   __memset_io
   memstart_addr
   memunmap
-  mipi_dsi_attach
-  mipi_dsi_detach
-  mipi_dsi_device_register_full
-  mipi_dsi_device_unregister
   misc_deregister
   misc_register
   mod_delayed_work_on
@@ -5174,7 +5170,15 @@
 # required by lmh.ko
   of_cpu_node_to_id
 
+# required by lontium-lt9611.ko
+  mipi_dsi_attach
+  mipi_dsi_detach
+  mipi_dsi_device_register_full
+  mipi_dsi_device_unregister
+
 # required by lontium-lt9611uxc.ko
+  devm_mipi_dsi_attach
+  devm_mipi_dsi_device_register_full
   print_hex_dump
   regmap_noinc_read
   regmap_noinc_write
@@ -5426,7 +5430,6 @@
   drm_dp_link_train_channel_eq_delay
   drm_dp_link_train_clock_recovery_delay
   drm_dp_read_sink_count
-  drm_edid_block_valid
   drm_encoder_cleanup
   drm_encoder_init
   drm_flip_work_cleanup
@@ -6156,6 +6159,7 @@
 # preserved by --additions-only
   android_kmalloc_64_create
   drm_connector_init_with_ddc
+  drm_edid_block_valid
   drm_mode_object_put
   gpiod_direction_input
   led_classdev_register_ext
@@ -24358,6 +24362,7 @@
   clk_set_rate
   clk_sync_state
   clk_unprepare
+  clk_unregister_fixed_rate
   close_fd
   cma_alloc
   cma_release
@@ -24909,6 +24914,7 @@
   genphy_c45_check_and_restart_aneg
   genphy_c45_pma_setup_forced
   genphy_c45_read_status
+  genphy_handle_interrupt_no_ack
   genphy_read_abilities
   genphy_read_lpa
   genphy_read_mmd_unsupported
@@ -24943,6 +24949,7 @@
   get_option
   get_page_owner_handle
   get_pfnblock_flags_mask
+  get_phy_device
   get_pid_task
   get_random_bytes
   get_sg_io_hdr
@@ -25019,6 +25026,7 @@
   hvc_remove
   hwspin_lock_free
   hwspin_lock_request_specific
+  __hw_addr_sync_dev
   __hwspin_lock_timeout
   __hwspin_unlock
   hypervisor_kobj
@@ -25379,6 +25387,7 @@
   mdiobus_free
   mdiobus_get_phy
   __mdiobus_read
+  __mdiobus_register
   mdiobus_read
   mdiobus_unregister
   __mdiobus_write
@@ -25472,6 +25481,7 @@
   neigh_destroy
   neigh_resolve_output
   netdev_alert
+  netdev_features_change
   netdev_rss_key_fill
   netif_receive_skb_list
   nla_find
@@ -25621,6 +25631,7 @@
   pci_disable_pcie_error_reporting
   pcie_aspm_enabled
   pcie_capability_clear_and_set_word
+  pcie_capability_read_dword
   pcie_capability_read_word
   pci_enable_device
   pci_enable_pcie_error_reporting
@@ -25634,10 +25645,12 @@
   pci_msi_create_irq_domain
   pci_msi_mask_irq
   pci_msi_unmask_irq
+  pci_prepare_to_sleep
   pci_read_config_dword
   pci_read_config_word
   __pci_register_driver
   pci_request_irq
+  pci_request_regions
   pci_restore_state
   pci_save_state
   pci_set_master
@@ -25674,8 +25687,11 @@
   perf_trace_buf_alloc
   perf_trace_run_bpf_submit
   phy_attached_info
+  phy_basic_t1_features
   phy_calibrate
   phy_config_aneg
+  phy_device_free
+  phy_device_register
   phy_drivers_register
   phy_drivers_unregister
   phy_error
@@ -25712,6 +25728,8 @@
   phylink_start
   phylink_stop
   phylink_suspend
+  phy_lookup_setting
+  phy_loopback
   phy_mac_interrupt
   __phy_modify
   phy_modify
@@ -25725,6 +25743,7 @@
   phy_read_mmd
   phy_read_paged
   phy_resolve_aneg_pause
+  phy_restart_aneg
   phy_restore_page
   phy_save_page
   phy_select_page
@@ -26014,6 +26033,7 @@
   rpmsg_get_signals
   rpmsg_poll
   rpmsg_register_device
+  rpmsg_register_device_override
   rpmsg_rx_done
   rpmsg_send
   rpmsg_set_signals
@@ -35616,6 +35636,7 @@ xa_load
   wq_worker_comm
   is_ashmem_file
   zero_pfn
+  is_transparent_hugepage
 
 [abi_symbol_list]
   add_cpu
@@ -39639,6 +39660,12 @@ xa_load
   hid_unregister_driver
   iio_trigger_generic_data_rdy_poll
   input_device_enabled
+  pci_prepare_to_sleep
+  pci_sriov_set_totalvfs
+  netdev_reset_tc
+  netdev_set_tc_queue
+  netdev_set_num_tc
+  devm_iio_kfifo_buffer_setup_ext
 
 [abi_symbol_list]
 # commonly used symbols
