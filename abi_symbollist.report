@@ -1135,6 +1135,7 @@ add_cpu	UNKNOWN
 add_device_randomness	UNKNOWN	
 add_memory	UNKNOWN	
 add_memory_subsection	UNKNOWN	
+add_taint	UNKNOWN	
 add_timer	UNKNOWN	
 add_timer_on	UNKNOWN	
 add_to_page_cache_locked	UNKNOWN	
@@ -2081,6 +2082,8 @@ devm_mdiobus_alloc_size	UNKNOWN
 devm_memremap	UNKNOWN	
 devm_memunmap	UNKNOWN	
 devm_mfd_add_devices	UNKNOWN	
+devm_mipi_dsi_attach	UNKNOWN	
+devm_mipi_dsi_device_register_full	UNKNOWN	
 devm_nvmem_cell_get	UNKNOWN	
 devm_nvmem_device_get	UNKNOWN	
 devm_nvmem_register	UNKNOWN	
@@ -3299,6 +3302,7 @@ ignore_console_lock_warning	UNKNOWN
 igrab	UNKNOWN	
 ihold	UNKNOWN	
 iio_alloc_pollfunc	UNKNOWN	
+iio_buffer_enabled	UNKNOWN	
 iio_buffer_init	UNKNOWN	
 iio_buffer_put	UNKNOWN	
 iio_channel_get	UNKNOWN	
@@ -3766,6 +3770,7 @@ mark_buffer_dirty	UNKNOWN
 mark_buffer_write_io_error	UNKNOWN	
 mark_page_accessed	UNKNOWN	
 match_string	UNKNOWN	
+max_load_balance_interval	UNKNOWN	
 mbox_chan_received_data	UNKNOWN	
 mbox_chan_txdone	UNKNOWN	
 mbox_client_txdone	UNKNOWN	
@@ -5605,6 +5610,7 @@ sort	UNKNOWN
 spi_alloc_device	UNKNOWN	
 spi_async	UNKNOWN	
 spi_bus_lock	UNKNOWN	
+spi_bus_type	UNKNOWN	
 spi_bus_unlock	UNKNOWN	
 spi_busnum_to_master	UNKNOWN	
 spi_controller_resume	UNKNOWN	
@@ -5727,6 +5733,7 @@ syscon_regmap_lookup_by_phandle	UNKNOWN
 syscon_regmap_lookup_by_phandle_args	UNKNOWN	
 sysctl_sched_features	UNKNOWN	
 sysctl_sched_latency	UNKNOWN	
+sysctl_sched_min_granularity	UNKNOWN	
 sysctl_vals	UNKNOWN	
 sysfs_add_file_to_group	UNKNOWN	
 sysfs_add_link_to_group	UNKNOWN	
