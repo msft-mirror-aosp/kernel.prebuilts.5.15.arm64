@@ -24122,6 +24122,155 @@
   unregister_inetaddr_notifier
   wireless_send_event
 
+[abi_symbol_list]
+# commonly used symbols
+  arm64_const_caps_ready
+  __cpuhp_remove_state
+  __cpuhp_setup_state
+  cpu_hwcap_keys
+  kasan_flag_enabled
+  kfree
+  kmalloc_caches
+  kmem_cache_alloc_trace
+  memcpy
+  module_layout
+  __per_cpu_offset
+  preempt_schedule
+  _printk
+  __put_task_struct
+  __stack_chk_fail
+  __ubsan_handle_cfi_check_fail_abort
+
+# required by thermal_core_skip_irq.ko
+  __traceiter_android_vh_thermal_pm_notify_suspend
+  __tracepoint_android_vh_thermal_pm_notify_suspend
+  tracepoint_probe_register
+
+# required by zram.ko
+  __alloc_percpu
+  bio_endio
+  bio_end_io_acct_remapped
+  bio_start_io_acct
+  __blk_alloc_disk
+  blk_cleanup_disk
+  blk_queue_flag_clear
+  blk_queue_flag_set
+  blk_queue_io_min
+  blk_queue_io_opt
+  blk_queue_logical_block_size
+  blk_queue_max_discard_sectors
+  blk_queue_max_write_zeroes_sectors
+  blk_queue_physical_block_size
+  __class_register
+  class_unregister
+  __cpuhp_state_add_instance
+  __cpuhp_state_remove_instance
+  cpumask_next
+  __cpu_possible_mask
+  crypto_alloc_base
+  crypto_comp_compress
+  crypto_comp_decompress
+  crypto_destroy_tfm
+  crypto_has_alg
+  del_gendisk
+  device_add_disk
+  disk_end_io_acct
+  disk_start_io_acct
+  down_read
+  down_write
+  flush_dcache_page
+  free_pages
+  free_percpu
+  fsync_bdev
+  __get_free_pages
+  idr_alloc
+  idr_destroy
+  idr_find
+  idr_for_each
+  idr_remove
+  __init_rwsem
+  kstrtoint
+  kstrtou16
+  kstrtoull
+  memparse
+  memset64
+  mutex_is_locked
+  mutex_lock
+  mutex_unlock
+  nr_cpu_ids
+  __num_online_cpus
+  page_endio
+  param_ops_uint
+  __register_blkdev
+  scnprintf
+  set_capacity
+  set_capacity_and_notify
+  snprintf
+  strcmp
+  strcpy
+  strlcpy
+  strlen
+  sysfs_streq
+  unregister_blkdev
+  up_read
+  up_write
+  vfree
+  vzalloc
+  zs_compact
+  zs_create_pool
+  zs_destroy_pool
+  zs_free
+  zs_get_total_pages
+  zs_huge_class_size
+  zs_malloc
+  zs_map_object
+  zs_pool_stats
+  zs_unmap_object
+
+# required by zsmalloc.ko
+  alloc_anon_inode
+  __alloc_pages
+  __ClearPageMovable
+  contig_page_data
+  dec_zone_page_state
+  finish_wait
+  flush_work
+  __free_pages
+  inc_zone_page_state
+  init_pseudo
+  init_wait_entry
+  __init_waitqueue_head
+  iput
+  kern_mount
+  kern_unmount
+  kill_anon_super
+  kmem_cache_alloc
+  kmem_cache_create
+  kmem_cache_destroy
+  kmem_cache_free
+  kstrdup
+  __list_add_valid
+  __list_del_entry_valid
+  memstart_addr
+  page_mapping
+  prepare_to_wait_event
+  __put_page
+  queue_work_on
+  _raw_read_lock
+  _raw_read_unlock
+  _raw_spin_lock
+  _raw_spin_unlock
+  _raw_write_lock
+  _raw_write_unlock
+  register_shrinker
+  schedule
+  __SetPageMovable
+  system_wq
+  unlock_page
+  unregister_shrinker
+  wait_on_page_bit
+  __wake_up
+
 
 [abi_symbol_list]
   access_process_vm
@@ -26477,6 +26626,7 @@
   __traceiter_android_vh_show_suspend_epoch_val
   __traceiter_android_vh_skip_swap_map_write
   __traceiter_android_vh_timer_calc_index
+  __traceiter_android_vh_try_fixup_sea
   __traceiter_android_vh_ufs_check_int_errors
   __traceiter_android_vh_ufs_clock_scaling
   __traceiter_android_vh_ufs_compl_command
@@ -26600,6 +26750,7 @@
   __tracepoint_android_vh_show_suspend_epoch_val
   __tracepoint_android_vh_skip_swap_map_write
   __tracepoint_android_vh_timer_calc_index
+  __tracepoint_android_vh_try_fixup_sea
   __tracepoint_android_vh_ufs_check_int_errors
   __tracepoint_android_vh_ufs_clock_scaling
   __tracepoint_android_vh_ufs_compl_command
@@ -28291,6 +28442,7 @@ xa_load
   atomic_notifier_chain_register
   atomic_notifier_chain_unregister
   available_idle_cpu
+  avenrun
   balance_push_callback
   bio_add_page
   bio_alloc_bioset
@@ -35013,6 +35165,7 @@ xa_load
   blk_queue_write_cache
   blk_start_plug
   blk_status_to_errno
+  __break_lease
   call_rcu
   capable
   cgroup_add_dfl_cftypes
@@ -35022,9 +35175,11 @@ xa_load
   clear_page
   __ClearPageMovable
   complete
+  config_item_init_type_name
   congestion_wait
   contig_page_data
   copy_from_kernel_nofault
+  copy_fs_struct
   cpufreq_update_util_data
   __cpuhp_remove_state
   __cpuhp_setup_state
@@ -35039,6 +35194,7 @@ xa_load
   crypto_comp_decompress
   crypto_destroy_tfm
   crypto_has_alg
+  d_drop
   debugfs_create_dir
   debugfs_create_file
   dec_zone_page_state
@@ -35047,10 +35203,12 @@ xa_load
   del_gendisk
   del_timer
   del_timer_sync
+  dentry_open
   destroy_workqueue
   dev_get_by_index_rcu
   device_add_disk
   devres_destroy
+  dget_parent
   disk_end_io_acct
   disk_start_io_acct
   do_traversal_all_lruvec
@@ -35060,6 +35218,8 @@ xa_load
   down_write
   d_path
   dput
+  d_rehash
+  d_set_d_op
   dump_stack
   eventfd_ctx_fileget
   eventfd_signal
@@ -35071,11 +35231,15 @@ xa_load
   flush_dcache_page
   flush_work
   fput
+  free_fs_struct
   __free_pages
   free_pages
   free_percpu
   fs_bio_set
+  fsstack_copy_inode_size
   fsync_bdev
+  generic_delete_inode
+  __generic_file_fsync
   genlmsg_put
   genl_register_family
   genl_unregister_family
@@ -35162,6 +35326,8 @@ xa_load
   __list_add_valid
   __list_del_entry_valid
   __lock_page
+  lock_rename
+  lookup_one_len_unlocked
   match_string
   mem_cgroup_from_id
   memchr_inv
@@ -35178,9 +35344,11 @@ xa_load
   misc_deregister
   misc_register
   mmput
+  mntget
   mod_node_page_state
   mod_timer
   module_layout
+  mount_nodev
   msleep
   __mutex_init
   mutex_is_locked
@@ -35205,6 +35373,7 @@ xa_load
   nr_running
   __num_online_cpus
   of_css
+  override_creds
   page_endio
   __page_file_index
   __page_mapcount
@@ -35212,6 +35381,7 @@ xa_load
   page_referenced
   page_to_lruvec
   param_ops_uint
+  path_get
   __per_cpu_offset
   platform_device_add
   platform_device_alloc
@@ -35219,6 +35389,7 @@ xa_load
   platform_driver_unregister
   preempt_schedule
   preempt_schedule_notrace
+  prepare_creds
   prepare_to_wait
   prepare_to_wait_event
   prepare_to_wait_exclusive
@@ -35260,6 +35431,7 @@ xa_load
   register_sysctl_table
   register_tcf_proto_ops
   remove_proc_subtree
+  revert_creds
   root_mem_cgroup
   rtc_read_alarm
   __rtnl_link_unregister
@@ -35474,6 +35646,7 @@ xa_load
   __traceiter_android_vh_free_oem_binder_struct
   __traceiter_android_vh_binder_special_task
   __traceiter_android_vh_binder_free_buf
+  __traceiter_android_vh_binder_buffer_release
   __tracepoint_android_rvh_check_preempt_wakeup_ignore
   __tracepoint_android_rvh_do_serror
   __tracepoint_android_rvh_pick_next_entity
@@ -35611,9 +35784,11 @@ xa_load
   __tracepoint_android_vh_free_oem_binder_struct
   __tracepoint_android_vh_binder_special_task
   __tracepoint_android_vh_binder_free_buf
+  __tracepoint_android_vh_binder_buffer_release
   try_to_free_mem_cgroup_pages
   __ubsan_handle_cfi_check_fail_abort
   unlock_page
+  unlock_rename
   unregister_blkdev
   unregister_memory_notifier
   unregister_net_sysctl_table
@@ -35625,6 +35800,14 @@ xa_load
   up_read
   up_write
   vfree
+  vfs_create
+  vfs_getattr
+  vfs_mkdir
+  vfs_path_lookup
+  vfs_rename
+  vfs_rmdir
+  vfs_statfs
+  vfs_unlink
   vmalloc
   vmalloc_nr_pages
   vsnprintf
