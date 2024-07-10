@@ -1,7 +1,6 @@
 /system/lib/modules/kheaders.ko:
 /system/lib/modules/zsmalloc.ko:
 /system/lib/modules/zram.ko: /system/lib/modules/zsmalloc.ko
-/system/lib/modules/null_blk.ko:
 /system/lib/modules/mii.ko:
 /system/lib/modules/can-dev.ko:
 /system/lib/modules/vcan.ko:

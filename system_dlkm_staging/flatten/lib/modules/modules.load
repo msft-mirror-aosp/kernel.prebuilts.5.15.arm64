@@ -1,7 +1,6 @@
 kheaders.ko
 zsmalloc.ko
 zram.ko
-null_blk.ko
 mii.ko
 can-dev.ko
 vcan.ko

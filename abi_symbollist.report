@@ -407,6 +407,7 @@ __traceiter_android_rvh_set_gfp_zone_flags	UNKNOWN
 __traceiter_android_rvh_set_iowait	UNKNOWN	
 __traceiter_android_rvh_set_readahead_gfp_mask	UNKNOWN	
 __traceiter_android_rvh_set_skip_swapcache_flags	UNKNOWN	
+__traceiter_android_rvh_set_sugov_update	UNKNOWN	
 __traceiter_android_rvh_set_task_cpu	UNKNOWN	
 __traceiter_android_rvh_set_user_nice	UNKNOWN	
 __traceiter_android_rvh_set_user_nice_locked	UNKNOWN	
@@ -770,6 +771,7 @@ __tracepoint_android_rvh_set_gfp_zone_flags	UNKNOWN
 __tracepoint_android_rvh_set_iowait	UNKNOWN	
 __tracepoint_android_rvh_set_readahead_gfp_mask	UNKNOWN	
 __tracepoint_android_rvh_set_skip_swapcache_flags	UNKNOWN	
+__tracepoint_android_rvh_set_sugov_update	UNKNOWN	
 __tracepoint_android_rvh_set_task_cpu	UNKNOWN	
 __tracepoint_android_rvh_set_user_nice	UNKNOWN	
 __tracepoint_android_rvh_set_user_nice_locked	UNKNOWN	
@@ -1230,6 +1232,9 @@ bd_unlink_disk_holder	UNKNOWN
 bdev_check_media_change	UNKNOWN	
 bdev_read_only	UNKNOWN	
 bdevname	UNKNOWN	
+bdi_alloc	UNKNOWN	
+bdi_put	UNKNOWN	
+bdi_register	UNKNOWN	
 bgpio_init	UNKNOWN	
 bin2hex	UNKNOWN	
 bio_add_page	UNKNOWN	
@@ -1759,6 +1764,7 @@ crypto_spawn_tfm	UNKNOWN
 crypto_spawn_tfm2	UNKNOWN	
 crypto_unregister_aead	UNKNOWN	
 crypto_unregister_ahash	UNKNOWN	
+crypto_unregister_ahashes	UNKNOWN	
 crypto_unregister_alg	UNKNOWN	
 crypto_unregister_rng	UNKNOWN	
 crypto_unregister_rngs	UNKNOWN	
@@ -1770,6 +1776,9 @@ crypto_unregister_template	UNKNOWN
 crypto_unregister_templates	UNKNOWN	
 css_next_child	UNKNOWN	
 css_next_descendant_pre	UNKNOWN	
+css_task_iter_end	UNKNOWN	
+css_task_iter_next	UNKNOWN	
+css_task_iter_start	UNKNOWN	
 csum_ipv6_magic	UNKNOWN	
 csum_partial	UNKNOWN	
 csum_tcpudp_nofold	UNKNOWN	
@@ -1788,6 +1797,7 @@ dapm_pinctrl_event	UNKNOWN
 dapm_regulator_event	UNKNOWN	
 datagram_poll	UNKNOWN	
 dbs_update	UNKNOWN	
+deactivate_locked_super	UNKNOWN	
 deactivate_task	UNKNOWN	
 debug_locks_off	UNKNOWN	
 debug_locks_silent	UNKNOWN	
@@ -2011,6 +2021,7 @@ devm_add_action	UNKNOWN
 devm_alloc_etherdev_mqs	UNKNOWN	
 devm_backlight_device_register	UNKNOWN	
 devm_backlight_device_unregister	UNKNOWN	
+devm_bitmap_zalloc	UNKNOWN	
 devm_blk_crypto_profile_init	UNKNOWN	
 devm_clk_bulk_get	UNKNOWN	
 devm_clk_bulk_get_all	UNKNOWN	
@@ -2856,6 +2867,7 @@ find_vm_area	UNKNOWN
 find_vpid	UNKNOWN	
 finish_wait	UNKNOWN	
 firmware_request_nowarn	UNKNOWN	
+fixed_size_llseek	UNKNOWN	
 flow_block_cb_setup_simple	UNKNOWN	
 flow_keys_basic_dissector	UNKNOWN	
 flow_keys_dissector	UNKNOWN	
@@ -2972,6 +2984,7 @@ generic_mii_ioctl	UNKNOWN
 generic_perform_write	UNKNOWN	
 generic_permission	UNKNOWN	
 generic_read_dir	UNKNOWN	
+generic_shutdown_super	UNKNOWN	
 generic_write_checks	UNKNOWN	
 generic_write_end	UNKNOWN	
 geni_icc_disable	UNKNOWN	
@@ -3069,6 +3082,7 @@ gether_set_qmult	UNKNOWN
 gether_setup_name_default	UNKNOWN	
 gf128mul_lle	UNKNOWN	
 gic_nonsecure_priorities	UNKNOWN	
+gic_resume	UNKNOWN	
 gic_v3_cpu_init	UNKNOWN	
 gic_v3_dist_init	UNKNOWN	
 gic_v3_dist_wait_for_rwp	UNKNOWN	
@@ -3104,6 +3118,7 @@ gpiod_get_array	UNKNOWN
 gpiod_get_direction	UNKNOWN	
 gpiod_get_from_of_node	UNKNOWN	
 gpiod_get_index	UNKNOWN	
+gpiod_get_index_optional	UNKNOWN	
 gpiod_get_optional	UNKNOWN	
 gpiod_get_raw_value	UNKNOWN	
 gpiod_get_raw_value_cansleep	UNKNOWN	
@@ -3757,6 +3772,7 @@ log_read_mmio	UNKNOWN
 log_threaded_irq_wakeup_reason	UNKNOWN	
 log_write_mmio	UNKNOWN	
 logfc	UNKNOWN	
+lookup_bdev	UNKNOWN	
 lookup_page_ext	UNKNOWN	
 loops_per_jiffy	UNKNOWN	
 lru_cache_add	UNKNOWN	
@@ -3855,6 +3871,7 @@ mipi_dsi_dcs_set_column_address	UNKNOWN
 mipi_dsi_dcs_set_display_brightness	UNKNOWN	
 mipi_dsi_dcs_set_page_address	UNKNOWN	
 mipi_dsi_dcs_set_tear_off	UNKNOWN	
+mipi_dsi_dcs_write	UNKNOWN	
 mipi_dsi_dcs_write_buffer	UNKNOWN	
 mipi_dsi_detach	UNKNOWN	
 mipi_dsi_device_register_full	UNKNOWN	
@@ -4070,6 +4087,8 @@ nvmem_cell_write	UNKNOWN
 nvmem_device_put	UNKNOWN	
 nvmem_device_read	UNKNOWN	
 nvmem_device_write	UNKNOWN	
+nvmem_register	UNKNOWN	
+nvmem_unregister	UNKNOWN	
 of_address_to_resource	UNKNOWN	
 of_alias_get_id	UNKNOWN	
 of_clk_add_hw_provider	UNKNOWN	
@@ -5209,9 +5228,11 @@ seq_lseek	UNKNOWN
 seq_open	UNKNOWN	
 seq_open_private	UNKNOWN	
 seq_printf	UNKNOWN	
+seq_put_decimal_ull_width	UNKNOWN	
 seq_putc	UNKNOWN	
 seq_puts	UNKNOWN	
 seq_read	UNKNOWN	
+seq_read_iter	UNKNOWN	
 seq_release	UNKNOWN	
 seq_release_private	UNKNOWN	
 seq_vprintf	UNKNOWN	
@@ -5286,6 +5307,7 @@ sg_next	UNKNOWN
 sg_pcopy_from_buffer	UNKNOWN	
 sg_pcopy_to_buffer	UNKNOWN	
 sg_zero_buffer	UNKNOWN	
+sget_fc	UNKNOWN	
 shash_free_singlespawn_instance	UNKNOWN	
 shash_register_instance	UNKNOWN	
 shmem_file_setup	UNKNOWN	
@@ -5508,6 +5530,7 @@ snd_soc_dapm_weak_routes	UNKNOWN
 snd_soc_dpcm_get_substream	UNKNOWN	
 snd_soc_find_dai	UNKNOWN	
 snd_soc_find_dai_with_mutex	UNKNOWN	
+snd_soc_get_dai_name	UNKNOWN	
 snd_soc_get_enum_double	UNKNOWN	
 snd_soc_get_pcm_runtime	UNKNOWN	
 snd_soc_get_volsw	UNKNOWN	
@@ -5815,6 +5838,7 @@ thermal_cooling_device_register	UNKNOWN
 thermal_cooling_device_unregister	UNKNOWN	
 thermal_of_cooling_device_register	UNKNOWN	
 thermal_pressure	UNKNOWN	
+thermal_zone_bind_cooling_device	UNKNOWN	
 thermal_zone_device_disable	UNKNOWN	
 thermal_zone_device_enable	UNKNOWN	
 thermal_zone_device_register	UNKNOWN	
@@ -5872,6 +5896,7 @@ tracepoint_probe_register_prio	UNKNOWN
 tracepoint_probe_unregister	UNKNOWN	
 tracepoint_srcu	UNKNOWN	
 tracing_off	UNKNOWN	
+tracing_on	UNKNOWN	
 truncate_inode_pages	UNKNOWN	
 truncate_inode_pages_final	UNKNOWN	
 truncate_pagecache	UNKNOWN	
@@ -5954,6 +5979,7 @@ tty_std_termios	UNKNOWN
 tty_termios_baud_rate	UNKNOWN	
 tty_termios_copy_hw	UNKNOWN	
 tty_termios_encode_baud_rate	UNKNOWN	
+tty_termios_hw_change	UNKNOWN	
 tty_unregister_device	UNKNOWN	
 tty_unregister_driver	UNKNOWN	
 tty_unregister_ldisc	UNKNOWN	
@@ -6268,6 +6294,13 @@ usb_role_switch_set_role	UNKNOWN
 usb_role_switch_unregister	UNKNOWN	
 usb_root_hub_lost_power	UNKNOWN	
 usb_scuttle_anchored_urbs	UNKNOWN	
+usb_serial_deregister_drivers	UNKNOWN	
+usb_serial_generic_close	UNKNOWN	
+usb_serial_generic_get_icount	UNKNOWN	
+usb_serial_generic_open	UNKNOWN	
+usb_serial_generic_throttle	UNKNOWN	
+usb_serial_generic_unthrottle	UNKNOWN	
+usb_serial_register_drivers	UNKNOWN	
 usb_set_device_state	UNKNOWN	
 usb_set_interface	UNKNOWN	
 usb_sg_cancel	UNKNOWN	
