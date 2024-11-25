@@ -15853,30 +15853,57 @@
   zs_unmap_object
 
 [abi_symbol_list]
+  dev_get_flags
+  drop_super
+  in6addr_any
+  kfree
+  __kmalloc
+  mod_node_page_state
+  netdev_get_name
+  next_arg
+  page_cache_sync_ra
+  proc_create
+  profile_event_register
+  profile_event_unregister
+  single_open
+  si_swapinfo
+  sock_from_file
+  sock_gen_put
+  sock_i_ino
+  task_cputime_adjusted
+  tcp_done
+  tcp_send_active_reset
+  tcp_sync_mss
   __traceiter_android_rvh_dma_buf_stats_teardown
   __traceiter_android_vh_alter_mutex_list_add
   __traceiter_android_vh_alter_rwsem_list_add
+  __traceiter_android_vh_do_swap_page_spf
+  __traceiter_android_vh_io_statistics
   __traceiter_android_vh_mutex_init
   __traceiter_android_vh_mutex_unlock_slowpath
   __traceiter_android_vh_mutex_wait_finish
   __traceiter_android_vh_mutex_wait_start
+  __traceiter_android_vh_page_cache_miss
   __traceiter_android_vh_rwsem_init
   __traceiter_android_vh_rwsem_wake
   __traceiter_android_vh_rwsem_write_finished
-  __traceiter_android_vh_do_swap_page_spf
   __traceiter_android_vh_tune_fault_around_bytes
   __tracepoint_android_rvh_dma_buf_stats_teardown
   __tracepoint_android_vh_alter_mutex_list_add
   __tracepoint_android_vh_alter_rwsem_list_add
+  __tracepoint_android_vh_do_swap_page_spf
+  __tracepoint_android_vh_io_statistics
   __tracepoint_android_vh_mutex_init
   __tracepoint_android_vh_mutex_unlock_slowpath
   __tracepoint_android_vh_mutex_wait_finish
   __tracepoint_android_vh_mutex_wait_start
+  __tracepoint_android_vh_page_cache_miss
   __tracepoint_android_vh_rwsem_init
   __tracepoint_android_vh_rwsem_wake
   __tracepoint_android_vh_rwsem_write_finished
-  __tracepoint_android_vh_do_swap_page_spf
   __tracepoint_android_vh_tune_fault_around_bytes
+  udp4_lib_lookup
+  udp6_lib_lookup
 
 [abi_symbol_list]
 # commonly used symbols
@@ -18667,6 +18694,7 @@
   device_init_wakeup
   device_link_add
   device_link_del
+  device_property_match_string
   device_property_present
   device_property_read_string
   device_property_read_u32_array
@@ -22670,6 +22698,7 @@
   clk_hw_get_name
   clk_hw_get_num_parents
   clk_hw_get_parent
+  clk_hw_get_parent_index
   clk_hw_get_parent_by_index
   clk_hw_get_rate
   clk_hw_is_enabled
@@ -26040,6 +26069,7 @@
   extcon_set_property_capability
   extcon_set_state
   extcon_set_state_sync
+  extcon_sync
   fasync_helper
   __fdget
   fd_install
@@ -27932,7 +27962,9 @@
   usb_control_msg_send
   usb_debug_root
   usb_decode_ctrl
+  usb_disable_autosuspend
   usb_driver_set_configuration
+  usb_enable_autosuspend
   usb_ep_alloc_request
   usb_ep_autoconfig
   usb_ep_dequeue
@@ -33016,6 +33048,7 @@ xa_load
   clk_round_rate
   clk_set_parent
   clk_set_rate
+  clk_set_duty_cycle
   clk_sync_state
   clk_unprepare
   close_fd
