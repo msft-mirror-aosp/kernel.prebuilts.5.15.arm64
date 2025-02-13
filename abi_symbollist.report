@@ -1387,6 +1387,7 @@ blkcg_print_blkgs	UNKNOWN
 blkdev_compat_ptr_ioctl	UNKNOWN	
 blkdev_get_by_dev	UNKNOWN	
 blkdev_get_by_path	UNKNOWN	
+blkdev_ioctl	UNKNOWN	
 blkdev_issue_discard	UNKNOWN	
 blkdev_issue_flush	UNKNOWN	
 blkdev_put	UNKNOWN	
@@ -2221,6 +2222,15 @@ divider_get_val	UNKNOWN
 divider_recalc_rate	UNKNOWN	
 divider_ro_round_rate_parent	UNKNOWN	
 divider_round_rate_parent	UNKNOWN	
+dm_get_device	UNKNOWN	
+dm_io	UNKNOWN	
+dm_io_client_create	UNKNOWN	
+dm_io_client_destroy	UNKNOWN	
+dm_per_bio_data	UNKNOWN	
+dm_put_device	UNKNOWN	
+dm_register_target	UNKNOWN	
+dm_table_get_mode	UNKNOWN	
+dm_unregister_target	UNKNOWN	
 dma_alloc_attrs	UNKNOWN	
 dma_alloc_noncontiguous	UNKNOWN	
 dma_alloc_pages	UNKNOWN	
@@ -3224,6 +3234,7 @@ hdmi_drm_infoframe_pack	UNKNOWN
 hdmi_drm_infoframe_pack_only	UNKNOWN	
 hdmi_infoframe_pack	UNKNOWN	
 hdmi_infoframe_unpack	UNKNOWN	
+hdmi_spd_infoframe_init	UNKNOWN	
 hdmi_spd_infoframe_pack	UNKNOWN	
 hdmi_vendor_infoframe_init	UNKNOWN	
 hdmi_vendor_infoframe_pack	UNKNOWN	
@@ -4232,6 +4243,7 @@ of_get_regulator_init_data	UNKNOWN
 of_get_required_opp_performance_state	UNKNOWN	
 of_get_videomode	UNKNOWN	
 of_graph_get_endpoint_by_regs	UNKNOWN	
+of_graph_get_endpoint_count	UNKNOWN	
 of_graph_get_next_endpoint	UNKNOWN	
 of_graph_get_port_parent	UNKNOWN	
 of_graph_get_remote_endpoint	UNKNOWN	
@@ -5465,6 +5477,7 @@ skb_free_datagram	UNKNOWN
 skb_page_frag_refill	UNKNOWN	
 skb_partial_csum_set	UNKNOWN	
 skb_pull	UNKNOWN	
+skb_pull_data	UNKNOWN	
 skb_pull_rcsum	UNKNOWN	
 skb_push	UNKNOWN	
 skb_put	UNKNOWN	
@@ -6472,6 +6485,7 @@ v4l2_device_register	UNKNOWN
 v4l2_device_register_subdev	UNKNOWN	
 v4l2_device_unregister	UNKNOWN	
 v4l2_device_unregister_subdev	UNKNOWN	
+v4l2_enum_dv_timings_cap	UNKNOWN	
 v4l2_event_dequeue	UNKNOWN	
 v4l2_event_pending	UNKNOWN	
 v4l2_event_queue	UNKNOWN	
@@ -6486,6 +6500,7 @@ v4l2_fh_init	UNKNOWN
 v4l2_fh_is_singular	UNKNOWN	
 v4l2_fh_open	UNKNOWN	
 v4l2_fh_release	UNKNOWN	
+v4l2_find_dv_timings_cea861_vic	UNKNOWN	
 v4l2_i2c_subdev_init	UNKNOWN	
 v4l2_m2m_buf_copy_metadata	UNKNOWN	
 v4l2_m2m_buf_queue	UNKNOWN	
