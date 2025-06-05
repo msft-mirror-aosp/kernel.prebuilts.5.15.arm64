@@ -91,6 +91,7 @@ __devm_regmap_init_spi	UNKNOWN
 __devm_regmap_init_spmi_ext	UNKNOWN	
 __devm_release_region	UNKNOWN	
 __devm_request_region	UNKNOWN	
+__devm_reset_control_bulk_get	UNKNOWN	
 __devm_reset_control_get	UNKNOWN	
 __devm_rtc_register_device	UNKNOWN	
 __devm_spi_alloc_controller	UNKNOWN	
@@ -574,6 +575,7 @@ __traceiter_android_vh_pcplist_add_cma_pages_bypass	UNKNOWN
 __traceiter_android_vh_post_image_save	UNKNOWN	
 __traceiter_android_vh_printk_caller	UNKNOWN	
 __traceiter_android_vh_printk_caller_id	UNKNOWN	
+__traceiter_android_vh_printk_console_unlock	UNKNOWN	
 __traceiter_android_vh_printk_hotplug	UNKNOWN	
 __traceiter_android_vh_prio_inheritance	UNKNOWN	
 __traceiter_android_vh_prio_restore	UNKNOWN	
@@ -950,6 +952,7 @@ __tracepoint_android_vh_pcplist_add_cma_pages_bypass	UNKNOWN
 __tracepoint_android_vh_post_image_save	UNKNOWN	
 __tracepoint_android_vh_printk_caller	UNKNOWN	
 __tracepoint_android_vh_printk_caller_id	UNKNOWN	
+__tracepoint_android_vh_printk_console_unlock	UNKNOWN	
 __tracepoint_android_vh_printk_hotplug	UNKNOWN	
 __tracepoint_android_vh_prio_inheritance	UNKNOWN	
 __tracepoint_android_vh_prio_restore	UNKNOWN	
@@ -1330,6 +1333,7 @@ blk_mq_init_queue	UNKNOWN
 blk_mq_map_queues	UNKNOWN	
 blk_mq_pci_map_queues	UNKNOWN	
 blk_mq_quiesce_queue	UNKNOWN	
+blk_mq_quiesce_queue_nowait	UNKNOWN	
 blk_mq_requeue_request	UNKNOWN	
 blk_mq_rq_cpu	UNKNOWN	
 blk_mq_start_request	UNKNOWN	
@@ -1473,6 +1477,7 @@ can_rx_offload_threaded_irq_finish	UNKNOWN
 can_skb_get_frame_len	UNKNOWN	
 cancel_delayed_work	UNKNOWN	
 cancel_delayed_work_sync	UNKNOWN	
+cancel_work	UNKNOWN	
 cancel_work_sync	UNKNOWN	
 capable	UNKNOWN	
 capable_wrt_inode_uidgid	UNKNOWN	
@@ -2195,6 +2200,7 @@ devm_rtc_nvmem_register	UNKNOWN
 devm_snd_dmaengine_pcm_register	UNKNOWN	
 devm_snd_soc_register_card	UNKNOWN	
 devm_snd_soc_register_component	UNKNOWN	
+devm_spi_mem_dirmap_create	UNKNOWN	
 devm_spi_register_controller	UNKNOWN	
 devm_thermal_of_cooling_device_register	UNKNOWN	
 devm_thermal_zone_of_sensor_register	UNKNOWN	
@@ -2484,6 +2490,7 @@ drm_connector_list_iter_end	UNKNOWN
 drm_connector_list_iter_next	UNKNOWN	
 drm_connector_list_update	UNKNOWN	
 drm_connector_register	UNKNOWN	
+drm_connector_set_link_status_property	UNKNOWN	
 drm_connector_set_vrr_capable_property	UNKNOWN	
 drm_connector_unregister	UNKNOWN	
 drm_connector_update_edid_property	UNKNOWN	
@@ -2558,8 +2565,13 @@ drm_dp_mst_reset_vcpi_slots	UNKNOWN
 drm_dp_mst_topology_mgr_destroy	UNKNOWN	
 drm_dp_mst_topology_mgr_init	UNKNOWN	
 drm_dp_mst_topology_mgr_set_mst	UNKNOWN	
+drm_dp_read_desc	UNKNOWN	
+drm_dp_read_downstream_info	UNKNOWN	
+drm_dp_read_dpcd_caps	UNKNOWN	
 drm_dp_read_sink_count	UNKNOWN	
+drm_dp_read_sink_count_cap	UNKNOWN	
 drm_dp_send_power_updown_phy	UNKNOWN	
+drm_dp_send_real_edid_checksum	UNKNOWN	
 drm_dp_set_subconnector_property	UNKNOWN	
 drm_dp_update_payload_part1	UNKNOWN	
 drm_dp_update_payload_part2	UNKNOWN	
@@ -3004,6 +3016,8 @@ fwnode_property_read_u16_array	UNKNOWN
 fwnode_property_read_u32_array	UNKNOWN	
 fwnode_property_read_u64_array	UNKNOWN	
 fwnode_property_read_u8_array	UNKNOWN	
+fwnode_typec_mux_get	UNKNOWN	
+fwnode_typec_switch_get	UNKNOWN	
 fwnode_usb_role_switch_get	UNKNOWN	
 gcd	UNKNOWN	
 gen_pool_add_owner	UNKNOWN	
@@ -3295,6 +3309,7 @@ i2c_new_ancillary_device	UNKNOWN
 i2c_new_client_device	UNKNOWN	
 i2c_new_dummy_device	UNKNOWN	
 i2c_new_scanned_device	UNKNOWN	
+i2c_new_smbus_alert_device	UNKNOWN	
 i2c_parse_fw_timings	UNKNOWN	
 i2c_put_adapter	UNKNOWN	
 i2c_put_dma_safe_msg_buf	UNKNOWN	
@@ -3304,6 +3319,7 @@ i2c_smbus_read_byte	UNKNOWN
 i2c_smbus_read_byte_data	UNKNOWN	
 i2c_smbus_read_i2c_block_data	UNKNOWN	
 i2c_smbus_read_word_data	UNKNOWN	
+i2c_smbus_write_block_data	UNKNOWN	
 i2c_smbus_write_byte	UNKNOWN	
 i2c_smbus_write_byte_data	UNKNOWN	
 i2c_smbus_write_i2c_block_data	UNKNOWN	
@@ -4252,6 +4268,7 @@ of_graph_get_remote_port_parent	UNKNOWN
 of_graph_is_present	UNKNOWN	
 of_graph_parse_endpoint	UNKNOWN	
 of_hwspin_lock_get_id	UNKNOWN	
+of_i2c_get_board_info	UNKNOWN	
 of_icc_get	UNKNOWN	
 of_icc_xlate_onecell	UNKNOWN	
 of_iomap	UNKNOWN	
@@ -4403,12 +4420,14 @@ pci_common_swizzle	UNKNOWN
 pci_dev_get	UNKNOWN	
 pci_dev_present	UNKNOWN	
 pci_dev_put	UNKNOWN	
+pci_dev_run_wake	UNKNOWN	
 pci_device_group	UNKNOWN	
 pci_device_is_present	UNKNOWN	
 pci_disable_ats	UNKNOWN	
 pci_disable_device	UNKNOWN	
 pci_disable_link_state	UNKNOWN	
 pci_disable_msi	UNKNOWN	
+pci_disable_msix	UNKNOWN	
 pci_disable_pcie_error_reporting	UNKNOWN	
 pci_disable_sriov	UNKNOWN	
 pci_enable_atomic_ops_to_root	UNKNOWN	
@@ -4416,6 +4435,7 @@ pci_enable_ats	UNKNOWN
 pci_enable_device	UNKNOWN	
 pci_enable_device_mem	UNKNOWN	
 pci_enable_msi	UNKNOWN	
+pci_enable_msix_range	UNKNOWN	
 pci_enable_pcie_error_reporting	UNKNOWN	
 pci_enable_sriov	UNKNOWN	
 pci_enable_wake	UNKNOWN	
@@ -4452,6 +4472,7 @@ pci_msi_mask_irq	UNKNOWN
 pci_msi_unmask_irq	UNKNOWN	
 pci_msix_vec_count	UNKNOWN	
 pci_pio_to_address	UNKNOWN	
+pci_prepare_to_sleep	UNKNOWN	
 pci_read_config_byte	UNKNOWN	
 pci_read_config_dword	UNKNOWN	
 pci_read_config_word	UNKNOWN	
@@ -4478,6 +4499,7 @@ pci_set_mwi	UNKNOWN
 pci_set_power_state	UNKNOWN	
 pci_speed_string	UNKNOWN	
 pci_sriov_configure_simple	UNKNOWN	
+pci_status_get_and_clear_errors	UNKNOWN	
 pci_stop_and_remove_bus_device	UNKNOWN	
 pci_stop_and_remove_bus_device_locked	UNKNOWN	
 pci_stop_root_bus	UNKNOWN	
@@ -4500,10 +4522,12 @@ pcie_capability_read_dword	UNKNOWN
 pcie_capability_read_word	UNKNOWN	
 pcie_capability_write_word	UNKNOWN	
 pcie_link_speed	UNKNOWN	
+pcie_set_readrq	UNKNOWN	
 pcim_enable_device	UNKNOWN	
 pcim_iomap_regions	UNKNOWN	
 pcim_iomap_table	UNKNOWN	
 pcim_iounmap_regions	UNKNOWN	
+pcim_set_mwi	UNKNOWN	
 pcix_get_mmrbc	UNKNOWN	
 pcix_set_mmrbc	UNKNOWN	
 pcpu_nr_pages	UNKNOWN	
@@ -4596,6 +4620,7 @@ phy_sfp_probe	UNKNOWN
 phy_speed_down	UNKNOWN	
 phy_speed_up	UNKNOWN	
 phy_start	UNKNOWN	
+phy_start_aneg	UNKNOWN	
 phy_stop	UNKNOWN	
 phy_support_asym_pause	UNKNOWN	
 phy_suspend	UNKNOWN	
@@ -5033,6 +5058,7 @@ regulator_notifier_call_chain	UNKNOWN
 regulator_put	UNKNOWN	
 regulator_register	UNKNOWN	
 regulator_register_notifier	UNKNOWN	
+regulator_register_supply_alias	UNKNOWN	
 regulator_set_active_discharge_regmap	UNKNOWN	
 regulator_set_bypass_regmap	UNKNOWN	
 regulator_set_current_limit	UNKNOWN	
@@ -5047,6 +5073,7 @@ regulator_suspend_disable	UNKNOWN
 regulator_suspend_enable	UNKNOWN	
 regulator_unregister	UNKNOWN	
 regulator_unregister_notifier	UNKNOWN	
+regulator_unregister_supply_alias	UNKNOWN	
 release_firmware	UNKNOWN	
 release_pages	UNKNOWN	
 release_resource	UNKNOWN	
@@ -5070,6 +5097,9 @@ resched_curr	UNKNOWN
 reservation_ww_class	UNKNOWN	
 reserve_iova	UNKNOWN	
 reset_control_assert	UNKNOWN	
+reset_control_bulk_acquire	UNKNOWN	
+reset_control_bulk_deassert	UNKNOWN	
+reset_control_bulk_release	UNKNOWN	
 reset_control_deassert	UNKNOWN	
 reset_control_put	UNKNOWN	
 reset_control_release	UNKNOWN	
@@ -5146,6 +5176,7 @@ rproc_get_by_child	UNKNOWN
 rproc_get_by_phandle	UNKNOWN	
 rproc_mem_entry_free	UNKNOWN	
 rproc_mem_entry_init	UNKNOWN	
+rproc_of_parse_firmware	UNKNOWN	
 rproc_of_resm_mem_entry_init	UNKNOWN	
 rproc_put	UNKNOWN	
 rproc_remove_subdev	UNKNOWN	
@@ -5759,6 +5790,12 @@ spi_get_device_id	UNKNOWN
 spi_get_next_queued_message	UNKNOWN	
 spi_mem_adjust_op_size	UNKNOWN	
 spi_mem_default_supports_op	UNKNOWN	
+spi_mem_dirmap_read	UNKNOWN	
+spi_mem_dirmap_write	UNKNOWN	
+spi_mem_driver_register_with_owner	UNKNOWN	
+spi_mem_driver_unregister	UNKNOWN	
+spi_mem_exec_op	UNKNOWN	
+spi_mem_get_name	UNKNOWN	
 spi_mem_supports_op	UNKNOWN	
 spi_new_device	UNKNOWN	
 spi_register_controller	UNKNOWN	
@@ -6113,6 +6150,7 @@ typec_find_power_role	UNKNOWN
 typec_get_drvdata	UNKNOWN	
 typec_match_altmode	UNKNOWN	
 typec_mux_get_drvdata	UNKNOWN	
+typec_mux_put	UNKNOWN	
 typec_mux_register	UNKNOWN	
 typec_mux_set	UNKNOWN	
 typec_mux_unregister	UNKNOWN	
@@ -6127,7 +6165,9 @@ typec_set_pwr_opmode	UNKNOWN
 typec_set_pwr_role	UNKNOWN	
 typec_set_vconn_role	UNKNOWN	
 typec_switch_get_drvdata	UNKNOWN	
+typec_switch_put	UNKNOWN	
 typec_switch_register	UNKNOWN	
+typec_switch_set	UNKNOWN	
 typec_switch_unregister	UNKNOWN	
 typec_unregister_altmode	UNKNOWN	
 typec_unregister_partner	UNKNOWN	

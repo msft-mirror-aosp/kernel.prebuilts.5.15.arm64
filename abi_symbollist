@@ -564,6 +564,7 @@
   dput
   dql_completed
   dql_reset
+  drain_workqueue
   driver_attach
   driver_register
   driver_unregister
@@ -1444,6 +1445,7 @@
   of_device_is_compatible
   of_dma_configure_id
   of_dma_is_coherent
+  of_find_all_nodes
   of_find_compatible_node
   of_find_device_by_node
   of_find_i2c_adapter_by_node
@@ -1631,6 +1633,7 @@
   phy_print_status
   phy_read_paged
   phy_restore_page
+  phy_resume
   phy_select_page
   phy_set_mode_ext
   phy_trigger_machine
@@ -8539,6 +8542,7 @@
   devm_pinctrl_register_and_init
   devm_platform_ioremap_resource
   devm_platform_ioremap_resource_byname
+  devm_pm_runtime_enable
   devm_power_supply_get_by_phandle
   devm_power_supply_register
   devm_pwmchip_add
@@ -8637,9 +8641,11 @@
   dma_get_sgtable_attrs
   dma_heap_add
   dma_heap_buffer_alloc
+  dma_heap_bufferfd_alloc
   dma_heap_buffer_free
   dma_heap_find
   dma_heap_get_dev
+  dma_heap_get_drvdata
   dma_heap_get_name
   dma_heap_put
   dmam_alloc_attrs
@@ -8665,6 +8671,7 @@
   down
   down_interruptible
   down_read
+  down_read_trylock
   down_timeout
   down_trylock
   down_write
@@ -8876,6 +8883,7 @@
   get_cpu_idle_time_us
   get_cpu_iowait_time_us
   get_device
+  get_each_dmabuf
   __get_free_pages
   get_kernel_pages
   get_net_ns_by_fd
@@ -8987,6 +8995,7 @@
   inet_frags_fini
   inet_frags_init
   init_net
+  init_pid_ns
   init_pseudo
   __init_rwsem
   __init_swait_queue_head
@@ -9063,7 +9072,9 @@
   irq_set_parent
   irq_to_desc
   irq_work_run
+  is_dma_buf_file
   is_vmalloc_addr
+  iterate_fd
   jiffies
   jiffies_64_to_clock_t
   jiffies_to_msecs
@@ -9504,7 +9515,9 @@
   power_supply_get_by_name
   power_supply_get_drvdata
   power_supply_get_property
+  power_supply_register
   power_supply_reg_notifier
+  power_supply_unregister
   prandom_bytes
   prandom_u32
   preempt_schedule
@@ -9606,6 +9619,7 @@
   register_netdevice
   register_netdevice_notifier
   register_net_sysctl
+  register_oom_notifier
   register_pernet_device
   register_pernet_subsys
   register_pm_notifier
@@ -10149,6 +10163,7 @@
   unregister_netdevice_notifier
   unregister_netdevice_queue
   unregister_net_sysctl_table
+  unregister_oom_notifier
   unregister_pernet_device
   unregister_pernet_subsys
   unregister_pm_notifier
@@ -12472,6 +12487,7 @@
   __traceiter_android_vh_meminfo_proc_show
   __traceiter_android_vh_oom_check_panic
   __traceiter_android_vh_pcplist_add_cma_pages_bypass
+  __traceiter_android_vh_printk_console_unlock
   __traceiter_android_vh_sysrq_crash
   __traceiter_device_pm_callback_end
   __traceiter_device_pm_callback_start
@@ -12485,6 +12501,7 @@
   __tracepoint_android_vh_meminfo_proc_show
   __tracepoint_android_vh_oom_check_panic
   __tracepoint_android_vh_pcplist_add_cma_pages_bypass
+  __tracepoint_android_vh_printk_console_unlock
   __tracepoint_android_vh_sysrq_crash
   __tracepoint_device_pm_callback_end
   __tracepoint_device_pm_callback_start
@@ -21033,6 +21050,7 @@
   bpf_trace_run2
   cancel_delayed_work
   cancel_delayed_work_sync
+  cancel_work
   cancel_work_sync
   cdev_add
   cdev_alloc
@@ -21113,6 +21131,7 @@
   devm_regulator_register
   devm_request_threaded_irq
   __devm_reset_control_get
+  __devm_reset_control_bulk_get
   devm_reset_controller_register
   devres_add
   __devres_alloc_node
@@ -21199,6 +21218,8 @@
   i2c_get_adapter
   i2c_register_driver
   i2c_transfer
+  i2c_new_smbus_alert_device
+  i2c_smbus_write_block_data
   I_BDEV
   idr_alloc
   idr_destroy
@@ -21321,6 +21342,7 @@
   of_property_read_string_helper
   of_property_read_u32_index
   of_property_read_variable_u32_array
+  of_i2c_get_board_info
   page_pinner_inited
   __page_pinner_put_page
   panic
@@ -21390,6 +21412,8 @@
   regulator_get_voltage
   regulator_list_voltage
   regulator_set_voltage
+  regulator_register_supply_alias
+  regulator_unregister_supply_alias
   remap_pfn_range
   remove_proc_entry
   request_threaded_irq
@@ -21398,6 +21422,9 @@
   __reset_control_get
   reset_control_put
   reset_control_reset
+  reset_control_bulk_acquire
+  reset_control_bulk_deassert
+  reset_control_bulk_release
   rfkill_alloc
   rfkill_destroy
   rfkill_register
@@ -21730,6 +21757,8 @@
   extcon_sync
   fwnode_gpiod_get_index
   fwnode_property_read_string
+  fwnode_typec_mux_get
+  fwnode_typec_switch_get
   typec_find_port_data_role
   typec_find_port_power_role
   typec_get_drvdata
@@ -21737,6 +21766,9 @@
   typec_set_data_role
   typec_set_pwr_role
   typec_unregister_port
+  typec_mux_put
+  typec_switch_put
+  typec_switch_set
 
 # required by ftdi-spi.ko
   usb_bulk_msg
@@ -22096,6 +22128,7 @@
   phy_speed_down
   phy_speed_up
   phy_start
+  phy_start_aneg
   phy_stop
   phy_support_asym_pause
   phy_suspend
@@ -22267,6 +22300,7 @@
   drm_connector_cleanup
   drm_connector_init
   drm_connector_update_edid_property
+  drm_connector_set_link_status_property
   drm_crtc_cleanup
   drm_crtc_handle_vblank
   drm_crtc_init_with_planes
@@ -22287,6 +22321,13 @@
   drm_dp_aux_register
   drm_dp_dpcd_read
   drm_dp_dpcd_write
+  drm_dp_read_dpcd_caps
+  drm_dp_read_sink_count_cap
+  drm_dp_read_dpcd_caps
+  drm_dp_read_desc
+  drm_dp_read_sink_count
+  drm_dp_read_downstream_info
+  drm_dp_send_real_edid_checksum
   drm_edid_is_valid
   drm_encoder_cleanup
   drm_encoder_init
@@ -22590,6 +22631,14 @@
   __traceiter_dwc3_writel
   __tracepoint_dwc3_writel
   trace_print_symbols_seq
+  pci_disable_msix
+  pci_enable_msix_range
+  pci_prepare_to_sleep
+  rproc_of_parse_firmware
+  pcim_set_mwi
+  pci_dev_run_wake
+  pci_status_get_and_clear_errors
+  pcie_set_readrq
 
 [abi_symbol_list]
   add_cpu
@@ -23864,6 +23913,28 @@
   __warn_printk
   wireless_nlevent_flush
   write_inode_now
+
+[abi_symbol_list]
+  __cfi_slowpath_diag
+  console_drivers
+  cpu_number
+  __cpu_online_mask
+  gic_nonsecure_priorities
+  memchr
+  memcpy
+  memmove
+  _printk
+  _raw_spin_trylock
+  _raw_spin_unlock_irqrestore
+  snprintf
+  sprintf
+  __stack_chk_fail
+  strcmp
+  __traceiter_android_vh_printk_console_unlock
+  __tracepoint_android_vh_printk_console_unlock
+  tracepoint_probe_register
+  tracepoint_probe_unregister
+  __ubsan_handle_cfi_check_fail_abort
 
 [abi_symbol_list]
 # commonly used symbols
@@ -25250,6 +25321,15 @@
   of_clk_get_parent_name
 
 [abi_symbol_list]
+  spi_mem_exec_op
+  spi_mem_dirmap_read
+  spi_mem_dirmap_write
+  spi_mem_driver_register_with_owner
+  spi_mem_get_name
+  devm_spi_mem_dirmap_create
+  spi_mem_driver_unregister
+
+[abi_symbol_list]
   avenrun
   kstat
   kernel_cpustat
@@ -25596,6 +25676,7 @@
   bpf_trace_run5
   bpf_trace_run6
   blk_mq_freeze_queue
+  blk_mq_quiesce_queue_nowait
   blk_mq_unfreeze_queue
   bt_err
   bt_info
