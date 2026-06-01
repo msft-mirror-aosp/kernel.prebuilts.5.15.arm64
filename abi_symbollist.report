@@ -651,6 +651,8 @@ __traceiter_android_vh_unreserve_highatomic_bypass	UNKNOWN
 __traceiter_android_vh_update_topology_flags_workfn	UNKNOWN	
 __traceiter_android_vh_usb_dev_resume	UNKNOWN	
 __traceiter_android_vh_use_amu_fie	UNKNOWN	
+__traceiter_android_vh_watchdog_timer_softlockup	UNKNOWN	
+__traceiter_android_vh_wq_lockup_pool	UNKNOWN	
 __traceiter_android_vh_xhci_urb_suitable_bypass	UNKNOWN	
 __traceiter_binder_transaction_received	UNKNOWN	
 __traceiter_block_bio_remap	UNKNOWN	
@@ -684,6 +686,7 @@ __traceiter_pelt_dl_tp	UNKNOWN
 __traceiter_pelt_irq_tp	UNKNOWN	
 __traceiter_pelt_rt_tp	UNKNOWN	
 __traceiter_pelt_se_tp	UNKNOWN	
+__traceiter_rcu_stall_warning	UNKNOWN	
 __traceiter_rwmmio_post_read	UNKNOWN	
 __traceiter_rwmmio_post_write	UNKNOWN	
 __traceiter_rwmmio_read	UNKNOWN	
@@ -1029,6 +1032,8 @@ __tracepoint_android_vh_unreserve_highatomic_bypass	UNKNOWN
 __tracepoint_android_vh_update_topology_flags_workfn	UNKNOWN	
 __tracepoint_android_vh_usb_dev_resume	UNKNOWN	
 __tracepoint_android_vh_use_amu_fie	UNKNOWN	
+__tracepoint_android_vh_watchdog_timer_softlockup	UNKNOWN	
+__tracepoint_android_vh_wq_lockup_pool	UNKNOWN	
 __tracepoint_android_vh_xhci_urb_suitable_bypass	UNKNOWN	
 __tracepoint_binder_transaction_received	UNKNOWN	
 __tracepoint_block_bio_remap	UNKNOWN	
@@ -1062,6 +1067,7 @@ __tracepoint_pelt_dl_tp	UNKNOWN
 __tracepoint_pelt_irq_tp	UNKNOWN	
 __tracepoint_pelt_rt_tp	UNKNOWN	
 __tracepoint_pelt_se_tp	UNKNOWN	
+__tracepoint_rcu_stall_warning	UNKNOWN	
 __tracepoint_rwmmio_post_read	UNKNOWN	
 __tracepoint_rwmmio_post_write	UNKNOWN	
 __tracepoint_rwmmio_read	UNKNOWN	
@@ -1553,6 +1559,7 @@ clk_enable	UNKNOWN
 clk_fixed_factor_ops	UNKNOWN	
 clk_fixed_rate_ops	UNKNOWN	
 clk_gate_ops	UNKNOWN	
+clk_gate_restore_context	UNKNOWN	
 clk_get	UNKNOWN	
 clk_get_parent	UNKNOWN	
 clk_get_rate	UNKNOWN	
@@ -1625,9 +1632,11 @@ component_match_add_release	UNKNOWN
 component_unbind_all	UNKNOWN	
 cond_synchronize_rcu	UNKNOWN	
 config_ep_by_speed	UNKNOWN	
+config_group_find_item	UNKNOWN	
 config_group_init	UNKNOWN	
 config_group_init_type_name	UNKNOWN	
 config_item_get	UNKNOWN	
+config_item_init_type_name	UNKNOWN	
 config_item_put	UNKNOWN	
 config_item_set_name	UNKNOWN	
 configfs_register_group	UNKNOWN	
@@ -2090,6 +2099,7 @@ devm_clk_hw_register	UNKNOWN
 devm_clk_hw_register_clkdev	UNKNOWN	
 devm_clk_hw_register_fixed_factor	UNKNOWN	
 devm_clk_hw_unregister	UNKNOWN	
+devm_clk_notifier_register	UNKNOWN	
 devm_clk_put	UNKNOWN	
 devm_clk_register	UNKNOWN	
 devm_devfreq_add_device	UNKNOWN	
@@ -2240,6 +2250,7 @@ disk_start_io_acct	UNKNOWN
 divider_determine_rate	UNKNOWN	
 divider_get_val	UNKNOWN	
 divider_recalc_rate	UNKNOWN	
+divider_ro_determine_rate	UNKNOWN	
 divider_ro_round_rate_parent	UNKNOWN	
 divider_round_rate_parent	UNKNOWN	
 dm_get_device	UNKNOWN	
@@ -2758,8 +2769,10 @@ drm_object_attach_property	UNKNOWN
 drm_object_property_set_value	UNKNOWN	
 drm_of_component_match_add	UNKNOWN	
 drm_of_component_probe	UNKNOWN	
+drm_of_encoder_active_endpoint	UNKNOWN	
 drm_of_find_panel_or_bridge	UNKNOWN	
 drm_of_find_possible_crtcs	UNKNOWN	
+drm_of_lvds_get_dual_link_pixel_order	UNKNOWN	
 drm_open	UNKNOWN	
 drm_panel_add	UNKNOWN	
 drm_panel_bridge_add_typed	UNKNOWN	
@@ -3465,6 +3478,7 @@ iio_trigger_poll_chained	UNKNOWN
 iio_trigger_unregister	UNKNOWN	
 iio_update_buffers	UNKNOWN	
 iio_validate_scan_mask_onehot	UNKNOWN	
+iio_write_channel_ext_info	UNKNOWN	
 iio_write_channel_raw	UNKNOWN	
 ilookup	UNKNOWN	
 ilookup5	UNKNOWN	
@@ -3814,6 +3828,7 @@ kstrtoint	UNKNOWN
 kstrtoint_from_user	UNKNOWN	
 kstrtol_from_user	UNKNOWN	
 kstrtoll	UNKNOWN	
+kstrtos16	UNKNOWN	
 kstrtos8	UNKNOWN	
 kstrtos8_from_user	UNKNOWN	
 kstrtou16	UNKNOWN	
@@ -4301,6 +4316,7 @@ of_get_videomode	UNKNOWN
 of_graph_get_endpoint_by_regs	UNKNOWN	
 of_graph_get_endpoint_count	UNKNOWN	
 of_graph_get_next_endpoint	UNKNOWN	
+of_graph_get_port_by_id	UNKNOWN	
 of_graph_get_port_parent	UNKNOWN	
 of_graph_get_remote_endpoint	UNKNOWN	
 of_graph_get_remote_node	UNKNOWN	
@@ -4819,6 +4835,7 @@ pm_runtime_no_callbacks	UNKNOWN
 pm_runtime_set_autosuspend_delay	UNKNOWN	
 pm_schedule_suspend	UNKNOWN	
 pm_stay_awake	UNKNOWN	
+pm_suspend	UNKNOWN	
 pm_suspend_global_flags	UNKNOWN	
 pm_suspend_target_state	UNKNOWN	
 pm_system_wakeup	UNKNOWN	
@@ -5595,6 +5612,7 @@ smpboot_register_percpu_thread	UNKNOWN
 smpboot_unregister_percpu_thread	UNKNOWN	
 snapshot_get_image_size	UNKNOWN	
 snd_card_free	UNKNOWN	
+snd_card_free_when_closed	UNKNOWN	
 snd_card_new	UNKNOWN	
 snd_card_ref	UNKNOWN	
 snd_card_register	UNKNOWN	
@@ -5656,6 +5674,8 @@ snd_pcm_set_managed_buffer_all	UNKNOWN
 snd_pcm_set_ops	UNKNOWN	
 snd_pcm_stop	UNKNOWN	
 snd_pcm_stop_xrun	UNKNOWN	
+snd_pcm_stream_lock	UNKNOWN	
+snd_pcm_stream_unlock	UNKNOWN	
 snd_pcm_stream_unlock_irqrestore	UNKNOWN	
 snd_pcm_suspend_all	UNKNOWN	
 snd_soc_add_card_controls	UNKNOWN	
@@ -6084,6 +6104,7 @@ trace_array_init_printk	UNKNOWN
 trace_array_printk	UNKNOWN	
 trace_array_put	UNKNOWN	
 trace_clock_local	UNKNOWN	
+trace_dump_stack	UNKNOWN	
 trace_event_buffer_commit	UNKNOWN	
 trace_event_buffer_reserve	UNKNOWN	
 trace_event_ignore_this_pid	UNKNOWN	
@@ -6415,12 +6436,15 @@ usb_find_interface	UNKNOWN
 usb_free_all_descriptors	UNKNOWN	
 usb_free_coherent	UNKNOWN	
 usb_free_urb	UNKNOWN	
+usb_function_activate	UNKNOWN	
+usb_function_deactivate	UNKNOWN	
 usb_function_register	UNKNOWN	
 usb_function_unregister	UNKNOWN	
 usb_gadget_activate	UNKNOWN	
 usb_gadget_connect	UNKNOWN	
 usb_gadget_deactivate	UNKNOWN	
 usb_gadget_disconnect	UNKNOWN	
+usb_gadget_frame_number	UNKNOWN	
 usb_gadget_giveback_request	UNKNOWN	
 usb_gadget_map_request	UNKNOWN	
 usb_gadget_map_request_by_dev	UNKNOWN	
@@ -6518,6 +6542,7 @@ usb_serial_generic_throttle	UNKNOWN
 usb_serial_generic_tiocmiwait	UNKNOWN	
 usb_serial_generic_unthrottle	UNKNOWN	
 usb_serial_handle_dcd_change	UNKNOWN	
+usb_serial_port_softint	UNKNOWN	
 usb_serial_register_drivers	UNKNOWN	
 usb_set_device_state	UNKNOWN	
 usb_set_interface	UNKNOWN	
@@ -6598,6 +6623,7 @@ v4l2_fh_init	UNKNOWN
 v4l2_fh_is_singular	UNKNOWN	
 v4l2_fh_open	UNKNOWN	
 v4l2_fh_release	UNKNOWN	
+v4l2_fill_pixfmt	UNKNOWN	
 v4l2_find_dv_timings_cea861_vic	UNKNOWN	
 v4l2_i2c_subdev_init	UNKNOWN	
 v4l2_m2m_buf_copy_metadata	UNKNOWN	
@@ -6636,6 +6662,7 @@ v4l2_m2m_try_schedule	UNKNOWN
 v4l2_m2m_unregister_media_controller	UNKNOWN	
 v4l2_match_dv_timings	UNKNOWN	
 v4l2_s_ctrl	UNKNOWN	
+v4l2_simplify_fraction	UNKNOWN	
 v4l2_src_change_event_subscribe	UNKNOWN	
 v4l2_subdev_call_wrappers	UNKNOWN	
 v4l2_subdev_init	UNKNOWN	
