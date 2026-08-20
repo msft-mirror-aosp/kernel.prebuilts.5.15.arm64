@@ -305,6 +305,7 @@ __skb_flow_dissect	UNKNOWN
 __skb_get_hash	UNKNOWN	
 __skb_gso_segment	UNKNOWN	
 __skb_pad	UNKNOWN	
+__snd_pcm_lib_xfer	UNKNOWN	
 __sock_create	UNKNOWN	
 __sock_queue_rcv_skb	UNKNOWN	
 __sock_recv_cmsgs	UNKNOWN	
@@ -2095,6 +2096,7 @@ devm_clk_bulk_get_all	UNKNOWN
 devm_clk_bulk_get_optional	UNKNOWN	
 devm_clk_get	UNKNOWN	
 devm_clk_get_optional	UNKNOWN	
+devm_clk_get_optional_enabled	UNKNOWN	
 devm_clk_hw_register	UNKNOWN	
 devm_clk_hw_register_clkdev	UNKNOWN	
 devm_clk_hw_register_fixed_factor	UNKNOWN	
@@ -2490,6 +2492,8 @@ drm_bridge_chain_pre_enable	UNKNOWN
 drm_bridge_connector_enable_hpd	UNKNOWN	
 drm_bridge_connector_init	UNKNOWN	
 drm_bridge_detect	UNKNOWN	
+drm_bridge_hpd_disable	UNKNOWN	
+drm_bridge_hpd_enable	UNKNOWN	
 drm_bridge_hpd_notify	UNKNOWN	
 drm_bridge_remove	UNKNOWN	
 drm_calc_timestamping_constants	UNKNOWN	
@@ -2549,6 +2553,7 @@ drm_crtc_vblank_reset	UNKNOWN
 drm_crtc_wait_one_vblank	UNKNOWN	
 drm_cvt_mode	UNKNOWN	
 drm_debugfs_create_files	UNKNOWN	
+drm_default_rgb_quant_range	UNKNOWN	
 drm_detect_hdmi_monitor	UNKNOWN	
 drm_detect_monitor_audio	UNKNOWN	
 drm_dev_alloc	UNKNOWN	
@@ -2699,7 +2704,9 @@ drm_hdcp_check_ksvs_revoked	UNKNOWN
 drm_hdcp_update_content_protection	UNKNOWN	
 drm_hdmi_avi_infoframe_content_type	UNKNOWN	
 drm_hdmi_avi_infoframe_from_display_mode	UNKNOWN	
+drm_hdmi_avi_infoframe_quant_range	UNKNOWN	
 drm_hdmi_infoframe_set_hdr_metadata	UNKNOWN	
+drm_hdmi_vendor_infoframe_from_display_mode	UNKNOWN	
 drm_helper_connector_dpms	UNKNOWN	
 drm_helper_disable_unused_functions	UNKNOWN	
 drm_helper_force_disable_all	UNKNOWN	
@@ -3126,6 +3133,12 @@ genl_unregister_family	UNKNOWN
 genlmsg_multicast_allns	UNKNOWN	
 genlmsg_put	UNKNOWN	
 genphy_aneg_done	UNKNOWN	
+genphy_c45_an_config_aneg	UNKNOWN	
+genphy_c45_check_and_restart_aneg	UNKNOWN	
+genphy_c45_pma_read_abilities	UNKNOWN	
+genphy_c45_pma_resume	UNKNOWN	
+genphy_c45_pma_setup_forced	UNKNOWN	
+genphy_c45_pma_suspend	UNKNOWN	
 genphy_c45_read_status	UNKNOWN	
 genphy_check_and_restart_aneg	UNKNOWN	
 genphy_handle_interrupt_no_ack	UNKNOWN	
@@ -4243,6 +4256,7 @@ nvmem_device_read	UNKNOWN
 nvmem_device_write	UNKNOWN	
 nvmem_register	UNKNOWN	
 nvmem_unregister	UNKNOWN	
+of_add_property	UNKNOWN	
 of_address_to_resource	UNKNOWN	
 of_alias_get_id	UNKNOWN	
 of_clk_add_hw_provider	UNKNOWN	
@@ -4658,6 +4672,7 @@ phy_mii_ioctl	UNKNOWN
 phy_modify	UNKNOWN	
 phy_modify_changed	UNKNOWN	
 phy_modify_mmd	UNKNOWN	
+phy_modify_mmd_changed	UNKNOWN	
 phy_modify_paged	UNKNOWN	
 phy_modify_paged_changed	UNKNOWN	
 phy_pm_runtime_get_sync	UNKNOWN	
